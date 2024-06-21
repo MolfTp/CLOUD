@@ -1,0 +1,33 @@
+﻿@    using CLOUD.Models.DBContext;
+    using CLOUD.Models.DBContext.Orders
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <h1>Admins</h1>
+
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => Orders.Id)</th>
+                    <th>@Html.DisplayNameFor(model => Orders.product)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>There are no admins currently.</p>
+    }
+}
